@@ -36,4 +36,14 @@ namespace Builder_DP
             Efficiency = "4 Manual";
         }
     }
+    class HatchBack : Car
+    {
+        public HatchBack()
+        {
+            Body = "HatchBack";
+            Engine = 66;
+            Tires = 13;
+            Efficiency = "4 Auto";
+        }
+    }
 }

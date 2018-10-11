@@ -20,10 +20,10 @@ namespace Builder_DP
             Console.WriteLine($"Body: {Body}");
             Console.WriteLine($"Engine: {Engine}hp");
             Console.WriteLine($"Tires: {Tires}");
-            Console.WriteLine($"Efficiency: {Efficiency}%");
+            Console.WriteLine($"Efficiency: {Efficiency}");
         }
     }
-    class Shop
+    public class Shop
     {
         public void Create(ConcreteBuilder concreteBuilder)
         {
@@ -37,7 +37,19 @@ namespace Builder_DP
     {
         static void Main(string[] args)
         {
-            ConcreteBuilder concreteBuilder = new ConcreteBuilder();
+            Shop shop = new Shop();
+            SedanBuilder sedanBuilder = new SedanBuilder();
+            shop.Create(sedanBuilder);
+            Car car = sedanBuilder.Car;
+            car.Name = "Daewoo Lanos";
+            car.Info();
+
+
+            HatchBackBuilder hatchBackBuilder = new HatchBackBuilder();
+            shop.Create(hatchBackBuilder);
+            Car car2 = hatchBackBuilder.Car;
+            car2.Name = "Hyundai Getz";
+            car2.Info();
         }
     }
 }
