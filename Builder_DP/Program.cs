@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Builder_DP
 {
-    class Car
+    public class Car
     {
         public string Name { get; set; }
         public string Body { get; set; }
@@ -21,14 +21,23 @@ namespace Builder_DP
             Console.WriteLine($"Engine: {Engine}hp");
             Console.WriteLine($"Tires: {Tires}");
             Console.WriteLine($"Efficiency: {Efficiency}%");
-
+        }
+    }
+    class Shop
+    {
+        public void Create(ConcreteBuilder concreteBuilder)
+        {
+            concreteBuilder.SetBody();
+            concreteBuilder.SetEngine();
+            concreteBuilder.SetTires();
+            concreteBuilder.SetEfficiency();
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-
+            ConcreteBuilder concreteBuilder = new ConcreteBuilder();
         }
     }
 }
