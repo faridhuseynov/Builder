@@ -6,10 +6,29 @@ using System.Threading.Tasks;
 
 namespace Builder_DP
 {
+    class Car
+    {
+        public string Name { get; set; }
+        public string Body { get; set; }
+        public int Engine { get; set; }
+        public int Tires { get; set; }
+        public string Efficiency { get; set; }
+        public void Info()
+        {
+            Console.WriteLine("=============================");
+            Console.WriteLine($"Car name: {Name}");
+            Console.WriteLine($"Body: {Body}");
+            Console.WriteLine($"Engine: {Engine}hp");
+            Console.WriteLine($"Tires: {Tires}");
+            Console.WriteLine($"Efficiency: {Efficiency}%");
+
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
